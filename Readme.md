@@ -6,14 +6,14 @@ There are times when you just want to generate some background load to stress-te
 useful when you're looking to test the scale out and in properties of your cluster as you deploy and load-test applications.
 
 This chart is really quite simple. It uses a short ruby script in a configmap that gets mounted and run on a ruby-alpine image.
-The current defaults will genereate about a 1000 milli-cpu load on an m3-large EC2 instance, so simply multiplying the number of
-replicas will map pretty evenly to CPUs.
+The current defaults will genereate about a 1000 milli-cpu load on an m3-large EC2 instance.
+
+It runs as a daemonset so each node in the cluster will have computation run on it.
+
 
 **To Install**
 
-1. Setup your KUBECONFIG
-1. Clone this repository
-1. Run the following
+- Run:
 
-    > helm install load-gen --name load-gen --set replicaCount={how many cpus}
+    > helm install load-gen --name load-gen
 
