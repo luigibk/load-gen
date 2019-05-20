@@ -4,7 +4,7 @@
 
 # These default values will generate ~ 1000 milli-cpus of load
 threads: "10"
-primes: "1000000"
+primes: "2000000"
 
 image:
   repository: ruby
@@ -12,8 +12,8 @@ image:
   pullPolicy: Always
 resources:
   limits:
-    cpu: 1000m
-    memory: 512Mi
+    cpu: 2000m
+    memory: 2048Mi
   requests:
-    cpu: 1000m
-    memory: 256Mi
+    cpu: 2000m
+    memory: 1024Mi
