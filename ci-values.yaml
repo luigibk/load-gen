@@ -1,0 +1,4 @@
+# Default CI values for load-gen
+
+#threads: "10"
+#primes: "2000000"

@@ -26,7 +26,7 @@ data:
         loop do
           Prime.first(num_primes).last
           count += 1
-          LOGGER.info("Thr: #{i} Interation Count: #{count}") && STDOUT.flush unless (count % report_interval > 0)
+          LOGGER.info("Thr: #{i} Iteration Count: #{count}") && STDOUT.flush unless (count % report_interval > 0)
         end
       }
     }
